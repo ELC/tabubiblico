@@ -3,7 +3,7 @@
     <div class="form__group">
       <label for="player-name" class="player-form__label">Nombre:</label>
       <input type="text" class="form__input player-form__input" id="player-name" name="player-name"
-        maxlength="30" placeholder="Player 1" @keyup="processName">
+        maxlength="30" placeholder="Jugador 1" @keyup="processName">
     </div>
     <div class="form__group">
       <label for="turn-duration" class="player-form__label">Duración del turno:</label>

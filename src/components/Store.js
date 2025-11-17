@@ -13,7 +13,7 @@ const store = new Vuex.Store({
     gameInitText: 'Preparado?',
 
     // General game data
-    playerName: 'Player 1',
+    playerName: 'Jugador 1',
     selectedCategory: 'classic',
     availableCards: {},
 
