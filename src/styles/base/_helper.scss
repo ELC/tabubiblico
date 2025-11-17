@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .hidden {
   display: none;
 }
@@ -9,12 +11,12 @@
 
     input:focus + &,
     input:checked + &{
-      background-color: darken($color, $focus-modifier);
+      background-color: color.adjust($color, $lightness: -$focus-modifier);
     }
   }
 
   .bg-gradient-#{$colorname} {
-    $color-dark: darken($color, $focus-modifier);
+    $color-dark: color.adjust($color, $lightness: -$focus-modifier);
     @include bg-gradient($color);
 
     input:focus + &,

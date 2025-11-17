@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .btn {
   display: inline-block;
   width: auto;
@@ -12,11 +14,11 @@
   // States
   &:hover,
   &:focus {
-    @include bg-gradient(darken($btn-default-bg, $focus-modifier));
+    @include bg-gradient(color.adjust($btn-default-bg, $lightness: -$focus-modifier));
   }
 
   &:active {
-    @include bg-gradient(darken($btn-default-bg, $active-modifier));
+    @include bg-gradient(color.adjust($btn-default-bg, $lightness: -$active-modifier));
   }
 
   &:disabled {
@@ -36,11 +38,11 @@
 
     &:hover,
     &:focus {
-      @include bg-gradient(darken($green, $focus-modifier));
+      @include bg-gradient(color.adjust($green, $lightness: -$focus-modifier));
     }
 
     &:active {
-      @include bg-gradient(darken($green, $active-modifier));
+      @include bg-gradient(color.adjust($green, $lightness: -$active-modifier));
     }
   }
 
@@ -49,11 +51,11 @@
 
     &:hover,
     &:focus {
-      @include bg-gradient(darken($red, $focus-modifier));
+      @include bg-gradient(color.adjust($red, $lightness: -$focus-modifier));
     }
 
     &:active {
-      @include bg-gradient(darken($red, $active-modifier));
+      @include bg-gradient(color.adjust($red, $lightness: -$active-modifier));
     }
   }
 
